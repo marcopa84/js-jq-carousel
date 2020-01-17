@@ -10,6 +10,20 @@ $(document).ready(
         clickPrev();
       }
     )
+    $(document).keydown(
+      function(){
+        console.log(event.keycode);
+        console.log(event.which);
+        if (event.which == 39 || event.keycode == 39){
+          clickNext();
+          console.log('prende avanti');
+        }
+        else if (event.which == 37 || event.keycode == 37){
+          clickPrev();
+          console.log('prende dietro');
+        }
+      }
+    );
   }
 );
 
